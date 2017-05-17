@@ -1,0 +1,21 @@
+{
+  "name": "jacksay",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Jacksay/jck",
+  "authors": [
+    "Stephane Bouvry <stephane.bouvry@unicaen.fr>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "web/lib/"
+  ],
+  "dependencies": {
+    "highlight": "~9.11.0",
+    "simplemde": "~1.11.2"
+  }
+}

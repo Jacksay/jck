@@ -38,9 +38,47 @@ class Article
     /**
      * @var string
      *
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $keywords;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="content", type="text")
      */
     private $content;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Category", inversedBy="articles")
+     */
+   private $category;
+
+   public function setKeywords($keywords)
+   {
+       $this->keywords = $keywords;
+       return $this;
+   }
+
+   public function getKeywords()
+   {
+       return $this->keywords;
+   }
+
+   /**
+    * @return Category
+    */
+   public function getCategory() {
+     return $this->category;
+   }
+
+   /**
+    * @return Article
+    */
+   public function setCategory( $category ){
+     $this->category = $category;
+     return $this;
+   }
 
 
     /**
@@ -125,4 +163,3 @@ class Article
         return $this->content;
     }
 }
-

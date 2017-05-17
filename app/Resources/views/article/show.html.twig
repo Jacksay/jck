@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <article>
+    <article class="ui container">
       <header>
         <h1>{{ article.title }}</h1>
         <p>Sub</p>
@@ -47,4 +47,16 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{{ asset('lib/highlight/src/styles/default.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('lib/highlight/src/styles/magula.css') }}" />
+{% endblock %}
+
+{% block javascripts %}
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
 {% endblock %}
